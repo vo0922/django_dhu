@@ -6,10 +6,13 @@ from .models import Post, Category, Tag, Comment
 from .forms import CommentForm
 from django.core.exceptions import PermissionDenied
 from django.utils.text import slugify
+from django.db.models import Q
 
 class PostList(ListView):
     model = Post
     ordering = '-pk'
+    paginate_by = 5
+
     template_name = 'blog/post_list.html'
 
     def get_context_data(self, **kwargs):
@@ -102,6 +105,22 @@ class PostUpdate(LoginRequiredMixin, UpdateView):
                 self.object.tag.add(tag)
 
         return response
+
+class PostSearch(PostList):
+    paginate_by =  None
+
+    def get_queryset(self):
+        q = self.kwargs['q']
+        post_list = Post.objects.filter(
+            Q(title__contains=q) | Q(tag__name__contains=q)
+        ).distinct()
+        return post_list
+
+    def get_context_data(self, **kwargs):
+        context = super(PostSearch, self).get_context_data()
+        q = self.kwargs['q']
+        context['search_info'] = f'Search: {q} ({self.get_queryset().count()})'
+        return context
 
 class CommentUpdate(LoginRequiredMixin, UpdateView):
     model = Comment
