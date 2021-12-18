@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9fab6d8a-33fb-4d8b-b1eb-8a4c69379369" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.env.prod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.env.prod.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.dev.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nginx/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nginx/nginx.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.prod" beforeDir="false" afterPath="$PROJECT_DIR$/.env.prod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.prod.db" beforeDir="false" afterPath="$PROJECT_DIR$/.env.prod.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/do_it_django_prj/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/do_it_django_prj/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/do_it_django_prj/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/do_it_django_prj/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nginx/nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/nginx/nginx.conf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
